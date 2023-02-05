@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222222;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+#logo{
+    width: 200px;
+    animation: beat .25s infinite alternate;
+	transform-origin: center;
+}
+@keyframes beat{
+	to { transform: scale(1.4); }
+}
+body::before{
+    background-image: url("./images/background.png");
+    background-size: cover;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25; /*Value from 0.0 to 1.0*/
+    align-items: center;
+}
+#countdown{
+    font-size: 36px;
+    font-weight: bold;
+    color: darkgreen;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    height: fit-content;
+}
