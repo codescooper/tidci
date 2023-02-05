@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="countdown">10</p>
+</body>
+<script>
+    var count = 31*24*60*60;
+    setInterval(function () {
+        count--;
+        if(count == 0){
+            clearInterval();
+        }
+        var days = Math.floor(count/(24*60*60));
+        var hours = Math.floor(count % (24*60*60) / (60*60));
+        var minutes = Math.floor(count % (60*60)/60);
+        var seconds = count % 60;
+        document.getElementById('countdown').innerHTML = days + "jours " + hours + " heures " + minutes + " minutes " + seconds + " seconde";
+    }, 1000);
+</script>
+</html>
